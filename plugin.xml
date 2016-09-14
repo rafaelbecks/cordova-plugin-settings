@@ -23,7 +23,7 @@
       </feature>
     </config-file>
 
-    <source-file src="src/android/Hello.java" target-dir="src/com/example/plugin/"/>
+    <source-file src="src/android/Settings.java" target-dir="src/com/example/plugin/"/>
   </platform>
 
 
