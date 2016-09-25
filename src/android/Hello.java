@@ -13,7 +13,7 @@ public class Hello extends CordovaPlugin {
         if (action.equals("sources")) {
 
             boolean isNonPlayAppAllowed = Settings.Secure.getInt(getContentResolver(), Settings.Secure.INSTALL_NON_MARKET_APPS) == 1;
-            callbackContext.success(isNonPlayAppAllowed);
+            callbackContext.success( Boolean.toString(isNonPlayAppAllowed));
 
             return true;
 
