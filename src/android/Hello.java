@@ -5,16 +5,17 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import android.provider.Settings.Secure;
 
-public class Settings extends CordovaPlugin {
+public class Hello extends CordovaPlugin {
 
     @Override
-    public boolean execute(String action) throws JSONException {
+    public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
 
-        if (action.equals("getSetting")) {
+        if (action.equals("sources")) {
 
             boolean isNonPlayAppAllowed = Settings.Secure.getInt(getContentResolver(), Settings.Secure.INSTALL_NON_MARKET_APPS) == 1;
+            callbackContext.success(isNonPlayAppAllowed);
 
-            return isNonPlayAppAllowed;
+            return true;
 
         } else {
             

@@ -2,6 +2,6 @@
 
 module.exports = {
     isUnknowSourcesEnabled: function (name,successCallback, errorCallback) {
-        cordova.exec(successCallback, errorCallback, "Settings", "getSetting",[name]);
+        cordova.exec(successCallback, errorCallback, "Settings", "getSetting");
     }
 };
